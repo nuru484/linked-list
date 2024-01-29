@@ -22,6 +22,18 @@ class LinkedList {
     const newNode = new Node(value, this.head);
     this.head = newNode;
   }
+
+  size() {
+    let total = 0;
+    let current = this.head;
+
+    while (current) {
+      total++;
+      current = current.nextNode;
+    }
+
+    return total;
+  }
 }
 
 class Node {
