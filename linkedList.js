@@ -85,6 +85,27 @@ class LinkedList {
     current.nextNode = null;
     return poppedNode;
   }
+
+  contains(value) {
+    let current = this.head;
+
+    if (!current) {
+      return false;
+    }
+
+    if (current.value === value) {
+      return true;
+    }
+
+    while (current.nextNode) {
+      current = current.nextNode;
+      if (current.value === value) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }
 
 class Node {
