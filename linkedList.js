@@ -49,6 +49,21 @@ class LinkedList {
     }
     return last;
   }
+  at(index) {
+    let node = null;
+    let total = 0;
+    let current = this.head;
+
+    while (current) {
+      total++;
+      if (total === index) {
+        node = current;
+        break;
+      }
+      current = current.nextNode;
+    }
+    return node;
+  }
 }
 
 class Node {
