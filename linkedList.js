@@ -31,8 +31,11 @@ class LinkedList {
       total++;
       current = current.nextNode;
     }
-
     return total;
+  }
+
+  head() {
+    return this.head;
   }
 }
 
