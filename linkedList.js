@@ -147,6 +147,42 @@ class LinkedList {
     string += ')';
     return string;
   }
+
+  insertAt(value, index) {
+    if (index < 0) {
+      return false;
+    }
+
+    if (index === 0) {
+      this.prepend(value);
+      return true;
+    }
+
+    let current = this.head;
+    let previous = null;
+    let currentIndex = 0;
+
+    while (current && currentIndex < index) {
+      previous = current;
+      current = current.nextNode;
+      currentIndex++;
+    }
+
+    if (currentIndex < index) {
+      return false;
+    }
+
+    const newNode = new Node(value);
+    newNode.nextNode = current;
+
+    if (previous) {
+      previous.nextNode = newNode;
+    } else {
+      this.head = newNode;
+    }
+
+    return true;
+  }
 }
 
 class Node {
