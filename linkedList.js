@@ -183,6 +183,30 @@ class LinkedList {
 
     return true;
   }
+
+  removeAt(index) {
+    if (index < 0 || index >= this.size()) {
+      return null;
+    }
+
+    if (index === 0) {
+      return this.pop();
+    }
+
+    let current = this.head;
+    let previous = null;
+    let currentIndex = 0;
+
+    while (currentIndex < index) {
+      previous = current;
+      current = current.nextNode;
+      currentIndex++;
+    }
+
+    previous.nextNode = current.nextNode;
+
+    return current.value;
+  }
 }
 
 class Node {
