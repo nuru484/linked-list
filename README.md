@@ -1,4 +1,4 @@
-# Linked List Assignment
+# The Odin Project Linked List Assignment
 
 This is a solution to the Odin Project LinkedList assignment, it is to implementing a Linked List data structure using two classes or factories: `LinkedList` and `Node`. The `LinkedList` class will represent the full list, and the `Node` class will contain a `value` property and a link to the next node, both set as null by default.
 
