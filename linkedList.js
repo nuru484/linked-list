@@ -129,6 +129,24 @@ class LinkedList {
 
     return -1;
   }
+  toString() {
+    let string = '(';
+    let current = this.head;
+
+    if (!current) {
+      return '()';
+    }
+
+    string += current.value;
+
+    while (current.nextNode) {
+      string += ') -> (' + current.nextNode.value;
+      current = current.nextNode;
+    }
+
+    string += ')';
+    return string;
+  }
 }
 
 class Node {
