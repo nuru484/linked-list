@@ -215,3 +215,38 @@ class Node {
     this.nextNode = nextNode;
   }
 }
+
+// Creating a new linked list
+const linkedList = new LinkedList();
+
+// Appending elements to the linked list
+linkedList.append(10);
+linkedList.append(20);
+linkedList.append(30);
+
+// Prepending an element to the linked list
+linkedList.prepend(5);
+
+// Printing the linked list
+console.log(linkedList.toString()); // Output: (5) -> (10) -> (20) -> (30)
+
+// Checking the size of the linked list
+console.log('Size:', linkedList.size()); // Output: Size: 4
+
+// Checking if the linked list contains a specific value
+console.log('Contains 20:', linkedList.contains(20)); // Output: Contains 20: true
+
+// Finding the index of a value in the linked list
+console.log('Index of 20:', linkedList.find(20)); // Output: Index of 20: 2
+
+// Inserting an element at a specific index
+linkedList.insertAt(15, 2);
+
+// Printing the updated linked list
+console.log(linkedList.toString()); // Output: (5) -> (10) -> (15) -> (20) -> (30)
+
+// Removing an element at a specific index
+linkedList.removeAt(3);
+
+// Printing the updated linked list
+console.log(linkedList.toString()); // Output: (5) -> (10) -> (15) -> (30)
