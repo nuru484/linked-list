@@ -34,7 +34,7 @@ class LinkedList {
     return total;
   }
 
-  head() {
+  getHead() {
     return this.head;
   }
   tail() {
